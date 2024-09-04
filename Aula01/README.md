@@ -3,48 +3,11 @@
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=GREEN&style=for-the-badge)
 
 
-Bem-vindo ao material da Aula 01, focado no setup inicial das ferramentas essenciais para a programação em Python: Python, Git & Github, e VSCode.
-
-Se você está revisando ou não conseguiu acompanhar o primeiro vídeo no Youtube, este é o lugar certo para começar!
-
-Assista ao vídeo no Youtube sobre o Setup de Python do Zero aqui: Python para dados
-
-Além disso, vamos criar nossa primeira aplicação em Python, e estou muito empolgado para guiá-lo nessa jornada!
-
-Desafio do dia: Cálculo de Bônus com Entrada do Usuário
-Escreva um programa em Python que solicita ao usuário para digitar seu nome, o valor do seu salário mensal e o valor do bônus que recebeu. O programa deve, então, imprimir uma mensagem saudando o usuário pelo nome e informando o valor do salário em comparação com o bônus recebido.
-
-imagem
-
-imagem
-
-Agenda (1 hora)
-Introdução (5 minutos)
-Instalação do Python (5 minutos)
-Instalação do VSCode (5 minutos)
-Configuração do Git e Github (5 minutos)
-Cálculo do nosso primeiro KPI (20 minutos)
-Dúvidas e desafio (20 minutos)
-1. Introdução
-Nesta aula, focaremos em preparar seu ambiente de desenvolvimento. Antes de começarmos a programar em Python, precisamos configurar as ferramentas necessárias para tornar nosso trabalho mais eficiente e organizado.
-
-Nossa plataforma
-Grupos de ajuda e de whatsapp
-Por que estudar Python?
-Python na engenharia de dados
-2. Instalação do Python
-Começaremos instalando o Python, a linguagem que utilizaremos neste curso.
-
-Baixe o instalador do Python no site oficial.
-Siga as instruções de instalação de acordo com seu sistema operacional.
-Após a instalação, abra o terminal e verifique se o Python foi instalado corretamente digitando python --version.
-Ao digitar python no terminal, iniciaremos o interpretador Python.
-
 Vamos praticar com alguns exemplos simples:
 
 Imprimir uma mensagem de boas-vindas:
 
-print("Bom dia turma do Bootcamp!")
+> print("Bom dia turma do Bootcamp!")
 Realizar uma operação matemática simples (soma):
 
 print(3 + 5)
