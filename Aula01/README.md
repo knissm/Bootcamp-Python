@@ -7,8 +7,10 @@ Vamos praticar com alguns exemplos simples:
 
 Imprimir uma mensagem de boas-vindas:
 
-> print("Bom dia turma do Bootcamp!")
+'''
+print("Bom dia turma do Bootcamp!")
 Realizar uma operação matemática simples (soma):
+'''
 
 print(3 + 5)
 Atribuir um valor a uma variável e imprimi-la:
