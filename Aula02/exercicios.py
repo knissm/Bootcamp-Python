@@ -141,17 +141,181 @@ print(num1 != num2)
 """
 
 #Exercício 21: Conversor de Temperatura
-#Escreva um programa que converta a temperatura de Celsius para Fahrenheit. O programa deve solicitar ao usuário a temperatura em Celsius e, utilizando try-except, garantir que a entrada seja numérica, tratando qualquer ValueError. Imprima o resultado em Fahrenheit ou uma mensagem de erro se a entrada não for válida.
-
+#Escreva um programa que converta a temperatura de Celsius para Fahrenheit. 
+# O programa deve solicitar ao usuário a temperatura em Celsius e, utilizando try-except, 
+# garantir que a entrada seja numérica, tratando qualquer ValueError. 
+# Imprima o resultado em Fahrenheit ou uma mensagem de erro se a entrada não for válida.
+"""
+try:
+    celsius = float(input("Celsius °: "))
+    F = (celsius * 1.8) + 32
+    print(f"{celsius:.1f}°C para Fahrenheit: {F:.1f} °F")
+except KeyboardInterrupt:
+    print("Interrompido pelo usuário")
+except ValueError:
+    print("Você não digitou um número. Digite um número!")
+"""
 #Exercício 22: Verificador de Palíndromo
-#Crie um programa que verifica se uma palavra ou frase é um palíndromo (lê-se igualmente de trás para frente, desconsiderando espaços e pontuações). Utilize try-except para garantir que a entrada seja uma string. Dica: Utilize a função isinstance() para verificar o tipo da entrada.
+#Crie um programa que verifica se uma palavra ou frase é um palíndromo 
+# (lê-se igualmente de trás para frente, desconsiderando espaços e pontuações). 
+# Utilize try-except para garantir que a entrada seja uma string. 
+# Dica: Utilize a função isinstance() para verificar o tipo da entrada.
+"""
+try:
+    palavra = input("Digite uma palavra: ").strip().lower().replace(" ", "")
+    if isinstance(palavra, str):
+        if palavra == palavra[::-1]:
+            print(f"A palavra {palavra} É palíndromo! {palavra[::-1]}")
+        else:
+            print(f"A palavra {palavra} não é Palíndromo!")
+    else:
+        print("Digite uma entrada válida")
+except ValueError:
+    print("Você não digitou uma entrada válida")
+except KeyboardInterrupt:
+    print("Abortado pelo usuário")
+"""
+
 
 #Exercício 23: Calculadora Simples
-#Desenvolva uma calculadora simples que aceite duas entradas numéricas e um operador (+, -, *, /) do usuário. Use try-except para lidar com divisões por zero e entradas não numéricas. Utilize if-elif-else para realizar a operação matemática baseada no operador fornecido. Imprima o resultado ou uma mensagem de erro apropriada.
+#Desenvolva uma calculadora simples que aceite duas entradas numéricas e um operador (+, -, *, /) do usuário. 
+# Use try-except para lidar com divisões por zero e entradas não numéricas. 
+# Utilize if-elif-else para realizar a operação matemática baseada no operador fornecido. 
+# Imprima o resultado ou uma mensagem de erro apropriada.
+"""
+print("~" * 25)
+print("Somar [+]")
+print("Subtrair [-]")
+print("Multiplicar [*]")
+print("Dividir [/]")
+print("~" * 25)
+
+try:
+    escolha = input("Escolha: ").strip()
+
+    if escolha == "+":
+        num1 = int(input("Número 1: "))
+        num2 = int(input("Número 2: "))
+        resultado = num1 + num2 
+        print(f"Soma de {num1} + {num2} é: {resultado} ")
+
+    if escolha == "-":
+        num1 = int(input("Número 1: "))
+        num2 = int(input("Número 2: "))
+        resultado = num1 - num2 
+        print(f"Subtração de {num1} - {num2} é: {resultado} ")
+
+    if escolha == "*":
+        num1 = int(input("Número 1: "))
+        num2 = int(input("Número 2: "))
+        resultado = num1 * num2 
+        print(f"Multiplicação de {num1} * {num2} é: {resultado} ")
+
+    if escolha == "/":
+        try:
+            num1 = int(input("Número 1: "))
+            num2 = int(input("Número 2: "))
+            resultado = num1 / num2 
+            print(f"Divisão de {num1} / {num2} é: {resultado} ")
+        except ZeroDivisionError:
+            print("Você não pode dividir algo por 0. Tente novamente!")
+
+    else:
+        print("Você não selecionou nem uma das escolhas!")
+    print("FIM")
+except KeyboardInterrupt:
+    print("Operação interrompida pelo usuario")
+"""
 
 #Exercício 24: Classificador de Números
-#Escreva um programa que solicite ao usuário para digitar um número. Utilize try-except para assegurar que a entrada seja numérica e utilize if-elif-else para classificar o número como "positivo", "negativo" ou "zero". Adicionalmente, identifique se o número é "par" ou "ímpar".
+#Escreva um programa que solicite ao usuário para digitar um número. 
+# Utilize try-except para assegurar que a entrada seja numérica e utilize if-elif-else para classificar o número como 
+# "positivo", "negativo" ou "zero". Adicionalmente, identifique se o número é "par" ou "ímpar".
+"""
+try:
+    numero = int(input("Digite um número: "))
+    if numero > 0:
+        print("Positivo")
+    elif numero <0:
+        print("Negativo ")
+    else:
+        print("Zero")
+
+    if numero % 2 == 0:
+        print("Par")
+    else:
+        print("Ímpar")
+
+except ValueError:
+    print("Por favor, digite um número inteiro válido!")
+
+except KeyboardInterrupt:
+    print("Interrompido pelo usuário")
+"""
 
 #Exercício 25: Conversão de Tipo com Validação
-#Crie um script que solicite ao usuário uma lista de números separados por vírgula. O programa deve converter a string de entrada em uma lista de números inteiros. Utilize try-except para tratar a conversão de cada número e validar que cada elemento da lista convertida é um inteiro. 
-#Se a conversão falhar ou um elemento não for um inteiro, imprima uma mensagem de erro. Se a conversão for bem-sucedida para todos os elementos, imprima a lista de inteiros.
+#Crie um script que solicite ao usuário uma lista de números separados por vírgula. 
+# O programa deve converter a string de entrada em uma lista de números inteiros. 
+# Utilize try-except para tratar a conversão de cada número e validar que cada elemento da lista convertida é um inteiro. 
+#Se a conversão falhar ou um elemento não for um inteiro, imprima uma mensagem de erro. 
+# Se a conversão for bem-sucedida para todos os elementos, imprima a lista de inteiros.
+"""
+numeros = input("Digite uma lista de numeros separados por ',': ").split(",")
+numeros_int = []
+try:
+    for numero in numeros:
+        numeros_int.append(int(numero.strip()))
+    print(numeros_int)
+except ValueError:
+    print("Alguma entrada foi inválida. Verifique!")
+
+except KeyboardInterrupt:
+    print("Usuário cancelou!")
+"""
+
+
+"""
+Desafio - Refatorar o projeto da aula anterior evitando Bugs!
+Para resolver os bugs identificados — tratamento de entradas inválidas que não podem ser convertidas para um 
+número de ponto flutuante e prevenção de valores negativos para salário e bônus, você pode modificar o código diretamente. 
+Isso envolve adicionar verificações adicionais após a tentativa de conversão para garantir que os valores sejam positivos.
+"""
+# Solicita ao usuário que digite seu nome
+try:
+    nome = input("Digite seu nome: ")
+
+    # Verifica se o nome está vazio
+    if len(nome) == 0:
+        raise ValueError("O nome não pode estar vazio.")
+    # Verifica se há números no nome
+    elif any(char.isdigit() for char in nome):
+        raise ValueError("O nome não deve conter números.")
+    else:
+        print("Nome válido:", nome)
+except ValueError as e:
+    print(e)
+
+# Solicita ao usuário que digite o valor do seu salário e converte para float
+
+try:
+    salario = float(input("Digite o valor do seu salário: "))
+    if salario < 0:
+        print("Por favor, digite um valor positivo para o salário.")
+except ValueError:
+    print("Entrada inválida para o salário. Por favor, digite um número.")
+
+# Solicita ao usuário que digite o valor do bônus recebido e converte para float
+try:
+    bonus_recebido = float(input("Digite o valor do bônus recebido: "))
+    if bonus_recebido < 0:
+        print("Por favor, digite um valor positivo para o bônus.")
+except ValueError:
+    print("Entrada inválida para o bônus. Por favor, digite um número.")
+
+# Assumindo uma lógica de cálculo para o bônus final e KPI
+bonus_final = bonus_recebido * 1.2  # Exemplo, ajuste conforme necessário
+kpi = (salario + bonus_final) / 1000  # Exemplo simples de KPI
+
+# Imprime as informações para o usuário
+print(f"Seu KPI é: {kpi:.2f}")
+print(f"{nome}, seu salário é R${salario:.2f} e seu bônus final é R${bonus_final:.2f}.")
