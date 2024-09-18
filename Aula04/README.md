@@ -1,0 +1,1 @@
+Parte 1 - typing, listas e dicionário
