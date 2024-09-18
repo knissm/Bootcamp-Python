@@ -1,11 +1,11 @@
-produto_01 = {
+produto_01:dict = {
     "nome":"sapato",
     "quantidade":39,
     "preco":13.38,
     "disponibilidade":True
 }
 
-produto_02 = {
+produto_02:dict = {
     "nome":"TV",
     "quantidade":630,
     "preco":1999,
