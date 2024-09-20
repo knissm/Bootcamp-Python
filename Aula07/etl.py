@@ -17,7 +17,7 @@ def filtrar_produtos_entregues(lista: list[dict]) -> list[dict]:
     Função que filtra produtos onde entrega = True
     """
     lista_com_produtos_filtrados = []
-    for produto in lista:
+    for produto in lista: #teste aqui
         if produto.get("entregue") == "True":
             lista_com_produtos_filtrados.append(produto)
     return lista_com_produtos_filtrados
