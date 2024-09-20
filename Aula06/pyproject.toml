@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "aula06"
+version = "0.1.0"
+description = ""
+authors = ["Marcelo <marcelo.kniss@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11.5"
+flake8 = "^7.1.1"
+black = "^24.8.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
